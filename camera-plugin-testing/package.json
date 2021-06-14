@@ -1,0 +1,37 @@
+{
+  "name": "com.pvpoyer.cameraplugintesting",
+  "displayName": "CameraPluginTesting",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cordova-prepare": "cordova prepare",
+    "build-for-android": "cordova build",
+    "emulate-for-android": "cordova emulate android --verbose"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.0.0",
+    "cordova-plugin-camera": "git+https://github.com/PieterVanPoyer/cordova-plugin-camera.git#bugfix/issue-665-save-instance-restore-bug",
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "cordova": "^10.0.0"
+  }
+}
